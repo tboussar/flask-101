@@ -19,7 +19,6 @@ class TestViews(TestCase):
         self.assertStatus(response, 200)
         self.assertEqual(product['name'], 'Skello')
 
-
     def test_read_product_404(self):
         response = self.client.get("/api/v1/products/404")
         self.assertStatus(response, 404)
